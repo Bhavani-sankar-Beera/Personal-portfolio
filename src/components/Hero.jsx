@@ -7,15 +7,15 @@ export default function Hero({ onOpenResume }) {
   return (
     <section
       id="hero"
-      className="relative min-h-0 lg:min-h-screen bg-black text-white flex items-start lg:items-center pt-14 sm:pt-20 lg:pt-28 pb-6 sm:pb-10 lg:pb-16 overflow-hidden"
+      className="relative min-h-0 lg:min-h-screen bg-black text-white flex items-start lg:items-center pt-20 sm:pt-24 lg:pt-32 pb-8 sm:pb-12 lg:pb-16 overflow-hidden"
     >
       {/* Background subtle geometric accents & subtle radial illumination */}
       <div className="absolute top-1/4 left-10 w-96 h-96 bg-neutral-900/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-neutral-900/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-10 w-full grid grid-cols-12 gap-2 sm:gap-8 items-start">
-        {/* Left Column: Summary & Typography (Moved Upwards, 7 cols on mobile, 6 cols on desktop) */}
-        <div className="col-span-7 sm:col-span-6 flex flex-col justify-start space-y-2.5 sm:space-y-5 z-10 pr-1 sm:pr-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-10 w-full grid grid-cols-12 gap-2 sm:gap-8 items-start relative">
+        {/* Left Column: Typography & Action Links (7 cols on mobile, 6 cols on desktop) */}
+        <div className="col-span-7 sm:col-span-6 flex flex-col justify-start space-y-3 sm:space-y-6 z-10 pr-1 sm:pr-0">
           {/* Subtle Top Badge */}
           <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-0.5 sm:py-1 border border-neutral-800 rounded-full w-fit bg-neutral-950/60 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -24,26 +24,21 @@ export default function Hero({ onOpenResume }) {
             </span>
           </div>
 
-          {/* Heading block directly matching the template's typography hierarchy */}
+          {/* Heading block directly matching the template's typography hierarchy with prominent name */}
           <div className="space-y-1 sm:space-y-2">
-            <p className="text-xs sm:text-lg md:text-xl text-neutral-300 font-light tracking-wide">
-              My Name is{' '}
-              <span className="text-white font-extrabold uppercase tracking-wider block sm:inline">
-                {personalInfo.displayName}
-              </span>
+            <p className="text-xs sm:text-base md:text-lg text-neutral-400 font-light tracking-widest uppercase">
+              My Name is
             </p>
-            <h1 className="text-lg sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white uppercase leading-none">
+              {personalInfo.displayName}
+            </h2>
+            <h1 className="text-sm sm:text-2xl md:text-3xl font-bold tracking-tight text-neutral-200 leading-tight pt-1">
               I am an <span className="underline decoration-1 underline-offset-4 sm:underline-offset-8 decoration-neutral-600 hover:decoration-white transition-colors">AI/ML Engineer</span>
             </h1>
             <p className="text-[11px] sm:text-base text-neutral-400 font-normal leading-snug">
               & Full Stack Developer crafting intelligent models and production platforms.
             </p>
           </div>
-
-          {/* Subtitle / Location statement matching template's "I am based in somewhere in the world" */}
-          <p className="text-[10px] sm:text-xs md:text-sm text-neutral-400 tracking-wider font-light leading-relaxed">
-            I am based in <span className="text-neutral-200 font-medium">Andhra Pradesh, India</span> — specialized in Deep Learning, Generative AI (Google Gemini, n8n), and robust backend architectures.
-          </p>
 
           {/* Action Links Row (Matching the template's minimal underline links) */}
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-6 pt-1 sm:pt-2">
@@ -117,33 +112,17 @@ export default function Hero({ onOpenResume }) {
               <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
           </div>
-
-          {/* Quick Metrics Bar matching user's metrics screenshot */}
-          <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-2.5 sm:pt-5 border-t border-neutral-900 max-w-lg">
-            <div>
-              <p className="text-sm sm:text-2xl font-bold font-mono text-white">8.4<span className="text-[10px] sm:text-xs text-neutral-400 font-normal">/10</span></p>
-              <p className="text-[8px] sm:text-[11px] uppercase tracking-wider text-neutral-500 font-medium">B.Tech CGPA</p>
-            </div>
-            <div>
-              <p className="text-sm sm:text-2xl font-bold font-mono text-white">93%<span className="text-[10px] sm:text-xs text-neutral-400 font-normal">+</span></p>
-              <p className="text-[8px] sm:text-[11px] uppercase tracking-wider text-neutral-500 font-medium">Model Acc</p>
-            </div>
-            <div>
-              <p className="text-sm sm:text-2xl font-bold font-mono text-white">DQN</p>
-              <p className="text-[8px] sm:text-[11px] uppercase tracking-wider text-neutral-500 font-medium">RL Research</p>
-            </div>
-          </div>
         </div>
 
-        {/* Right Column: Photo on the side, moved upwards alongside summary */}
-        <div className="col-span-5 sm:col-span-6 flex flex-col items-center justify-start relative -mt-2 sm:mt-0 pt-0.5 sm:pt-0">
-          <div className="relative w-[115%] sm:w-full max-w-[270px] sm:max-w-md lg:max-w-xl group">
+        {/* Right Column: Photo & Right Corner Summary */}
+        <div className="col-span-5 sm:col-span-6 flex flex-col items-center sm:items-end justify-start relative -mt-1 sm:mt-0">
+          <div className="relative w-[135%] sm:w-full max-w-[340px] sm:max-w-md lg:max-w-xl group">
             {/* Portrait Image Container */}
             <div className="relative overflow-hidden flex items-center justify-center bg-black">
               <img
                 src="/assets/profile_dark_studio.png"
                 alt={personalInfo.name}
-                className="w-full h-auto object-cover max-h-[380px] sm:max-h-[580px] lg:max-h-[640px] select-none pointer-events-none transform scale-105 sm:scale-100 origin-top"
+                className="w-full h-auto object-cover max-h-[460px] sm:max-h-[560px] lg:max-h-[620px] select-none pointer-events-none transform scale-120 sm:scale-100 origin-top"
               />
               
               {/* Seamless Fade Gradient at the bottom */}
