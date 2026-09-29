@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #000000;
+    --text-primary: #ffffff;
+    --text-secondary: #a3a3a3;
+    --border-subtle: #262626;
+  }
+
+  body {
+    background-color: #000000;
+    color: #e5e5e5;
+    font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #444444;
+  }
+}
+
+/* Custom minimal styling to match the reference aesthetic */
+.minimal-nav-link {
+  position: relative;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  transition: all 0.25s ease;
+}
+
+.minimal-nav-link:hover {
+  color: #ffffff;
+}
+
+.minimal-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #ffffff;
+  transition: width 0.25s ease;
+}
+
+.minimal-nav-link:hover::after {
+  width: 100%;
+}
+
+.hero-action-link {
+  position: relative;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #e5e5e5;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-action-link:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Elegant card hover */
+.brand-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(255, 255, 255, 0.08);
+}
