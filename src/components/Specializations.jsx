@@ -13,7 +13,7 @@ export default function Specializations() {
   return (
     <section
       id="specialized"
-      className="relative bg-black text-white py-20 sm:py-28 border-t border-neutral-900 overflow-hidden"
+      className="relative bg-black text-white py-10 sm:py-16 lg:py-24 border-t border-neutral-900 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-10">
         {/* Section Header matching the reference template */}
@@ -27,7 +27,7 @@ export default function Specializations() {
         </div>
 
         {/* 4 Pillars Grid: 2 columns on mobile, 4 columns on desktop */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 pt-12 sm:pt-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 pt-6 sm:pt-12 lg:pt-16">
           {specializations.map((spec) => {
             const IconComponent = iconMap[spec.icon] || Cpu;
             return (
@@ -63,7 +63,7 @@ export default function Specializations() {
         </div>
 
         {/* Technical Highlights Bar: 2 cols on mobile, 4 on desktop */}
-        <div className="mt-14 sm:mt-20 pt-8 sm:pt-10 border-t border-neutral-900/80 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
+        <div className="mt-8 sm:mt-14 pt-6 sm:pt-8 border-t border-neutral-900/80 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 text-center">
           <div className="space-y-1">
             <span className="text-[10px] sm:text-xs font-mono tracking-widest text-neutral-500 uppercase">Core Frameworks</span>
             <p className="text-xs sm:text-sm font-semibold text-neutral-200">PyTorch • TensorFlow • FastAPI</p>

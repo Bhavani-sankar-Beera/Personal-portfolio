@@ -7,15 +7,15 @@ export default function Hero({ onOpenResume }) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen bg-black text-white flex items-center pt-20 sm:pt-24 pb-12 sm:pb-16 overflow-hidden"
+      className="relative min-h-0 lg:min-h-screen bg-black text-white flex items-start lg:items-center pt-14 sm:pt-20 lg:pt-28 pb-6 sm:pb-10 lg:pb-16 overflow-hidden"
     >
       {/* Background subtle geometric accents & subtle radial illumination */}
       <div className="absolute top-1/4 left-10 w-96 h-96 bg-neutral-900/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-neutral-900/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-10 w-full grid grid-cols-12 gap-2 sm:gap-8 items-start pt-2 sm:pt-4">
-        {/* Left Column: Typography & Action Links (7 cols on mobile, 6 cols on desktop) */}
-        <div className="col-span-7 sm:col-span-6 flex flex-col justify-start space-y-3 sm:space-y-6 z-10 pr-1 sm:pr-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-10 w-full grid grid-cols-12 gap-2 sm:gap-8 items-start">
+        {/* Left Column: Summary & Typography (Moved Upwards, 7 cols on mobile, 6 cols on desktop) */}
+        <div className="col-span-7 sm:col-span-6 flex flex-col justify-start space-y-2.5 sm:space-y-5 z-10 pr-1 sm:pr-0">
           {/* Subtle Top Badge */}
           <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-0.5 sm:py-1 border border-neutral-800 rounded-full w-fit bg-neutral-950/60 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -46,7 +46,7 @@ export default function Hero({ onOpenResume }) {
           </p>
 
           {/* Action Links Row (Matching the template's minimal underline links) */}
-          <div className="flex flex-wrap items-center gap-3 sm:gap-6 pt-1 sm:pt-2">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-6 pt-1 sm:pt-2">
             <a
               href="#specialized"
               className="hero-action-link text-[10px] sm:text-xs"
@@ -74,7 +74,7 @@ export default function Hero({ onOpenResume }) {
           </div>
 
           {/* Social Icons Row (Matching the template's icon layout) */}
-          <div className="flex items-center gap-3 sm:gap-5 pt-2 text-neutral-400">
+          <div className="flex items-center gap-3 sm:gap-5 pt-1.5 sm:pt-2 text-neutral-400">
             <a
               href={personalInfo.socials.github}
               target="_blank"
@@ -119,7 +119,7 @@ export default function Hero({ onOpenResume }) {
           </div>
 
           {/* Quick Metrics Bar matching user's metrics screenshot */}
-          <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-3 sm:pt-6 border-t border-neutral-900 max-w-lg">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-2.5 sm:pt-5 border-t border-neutral-900 max-w-lg">
             <div>
               <p className="text-sm sm:text-2xl font-bold font-mono text-white">8.4<span className="text-[10px] sm:text-xs text-neutral-400 font-normal">/10</span></p>
               <p className="text-[8px] sm:text-[11px] uppercase tracking-wider text-neutral-500 font-medium">B.Tech CGPA</p>
@@ -135,9 +135,9 @@ export default function Hero({ onOpenResume }) {
           </div>
         </div>
 
-        {/* Right Column: Photo on the side, slightly adjusted down for ideal vertical balance */}
-        <div className="col-span-5 sm:col-span-6 flex flex-col items-center justify-start relative mt-1 sm:-mt-2 lg:-mt-4">
-          <div className="relative w-[112%] sm:w-full max-w-[270px] sm:max-w-md lg:max-w-xl group">
+        {/* Right Column: Photo on the side, moved upwards alongside summary */}
+        <div className="col-span-5 sm:col-span-6 flex flex-col items-center justify-start relative -mt-2 sm:mt-0 pt-0.5 sm:pt-0">
+          <div className="relative w-[115%] sm:w-full max-w-[270px] sm:max-w-md lg:max-w-xl group">
             {/* Portrait Image Container */}
             <div className="relative overflow-hidden flex items-center justify-center bg-black">
               <img
@@ -161,14 +161,14 @@ export default function Hero({ onOpenResume }) {
         </div>
       </div>
 
-      {/* Down Scroll Indicator */}
+      {/* Down Scroll Indicator (Desktop only) */}
       <a
         href="#specialized"
         aria-label="Scroll down to specialization"
-        className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-1 text-neutral-600 hover:text-white transition-colors duration-300"
+        className="hidden lg:flex absolute bottom-3 left-1/2 transform -translate-x-1/2 flex-col items-center gap-1 text-neutral-600 hover:text-white transition-colors duration-300"
       >
-        <span className="text-[9px] sm:text-[10px] tracking-[0.25em] font-mono uppercase">Scroll</span>
-        <div className="w-[1px] h-4 sm:h-6 bg-gradient-to-b from-neutral-500 to-transparent animate-pulse"></div>
+        <span className="text-[10px] tracking-[0.25em] font-mono uppercase">Scroll</span>
+        <div className="w-[1px] h-6 bg-gradient-to-b from-neutral-500 to-transparent animate-pulse"></div>
       </a>
     </section>
   );

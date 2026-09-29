@@ -57,11 +57,11 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative bg-black text-white py-20 sm:py-28 border-t border-neutral-900"
+      className="relative bg-black text-white py-10 sm:py-16 lg:py-24 border-t border-neutral-900"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-10">
         {/* Section Header directly matching "Lets Talk" */}
-        <div className="text-center space-y-3 sm:space-y-4 mb-12 sm:mb-16">
+        <div className="text-center space-y-2 sm:space-y-4 mb-6 sm:mb-10">
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">
             Lets <span className="font-light italic text-neutral-400">Talk</span>
           </h2>
@@ -71,7 +71,7 @@ export default function Contact() {
         </div>
 
         {/* 3 Info Columns side-by-side on ALL screens matching template layout */}
-        <div className="grid grid-cols-3 gap-2 sm:gap-8 text-center pb-12 sm:pb-16 border-b border-neutral-900">
+        <div className="grid grid-cols-3 gap-2 sm:gap-8 text-center pb-6 sm:pb-10 border-b border-neutral-900">
           {/* Address */}
           <div className="space-y-1 sm:space-y-2">
             <h3 className="text-[10px] sm:text-xs font-mono uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white">
@@ -125,7 +125,7 @@ export default function Contact() {
           action="https://formspree.io/f/myezojgy"
           method="POST"
           onSubmit={handleSubmit}
-          className="pt-10 sm:pt-14 max-w-3xl mx-auto space-y-6 sm:space-y-10"
+          className="pt-6 sm:pt-10 max-w-3xl mx-auto space-y-4 sm:space-y-8"
         >
           {errorMessage && (
             <div className="p-3 sm:p-4 border border-red-500/40 bg-red-950/20 text-center rounded flex items-center justify-center gap-2 text-red-400 text-xs font-mono">

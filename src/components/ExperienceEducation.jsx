@@ -8,21 +8,21 @@ export default function ExperienceEducation() {
   return (
     <section
       id="experience"
-      className="relative bg-black text-white py-28 border-t border-neutral-900"
+      className="relative bg-black text-white py-10 sm:py-16 lg:py-24 border-t border-neutral-900"
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-10">
         {/* Section Header: Academics & Experience */}
-        <div className="text-center max-w-2xl mx-auto space-y-4 mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white uppercase">
+        <div className="text-center max-w-2xl mx-auto space-y-2 sm:space-y-4 mb-6 sm:mb-10">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white uppercase">
             Academics & <span className="font-light italic text-neutral-400">Experience</span>
           </h2>
-          <p className="text-xs sm:text-sm text-neutral-400 tracking-wider font-light">
+          <p className="text-[11px] sm:text-sm text-neutral-400 tracking-wider font-light">
             Educational foundation (8.4 CGPA), software engineering internship, peer-reviewed research, certifications, and technical skills.
           </p>
         </div>
 
         {/* Tab Switcher */}
-        <div className="flex items-center justify-center gap-2 sm:gap-4 mb-14 flex-wrap">
+        <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 sm:mb-10 flex-wrap">
           {[
             { id: 'experience', label: 'EXPERIENCE & RESEARCH' },
             { id: 'academics', label: 'EDUCATION' },
@@ -45,9 +45,9 @@ export default function ExperienceEducation() {
 
         {/* Tab 1: Experience & Research */}
         {activeTab === 'experience' && (
-          <div className="max-w-4xl mx-auto space-y-10">
+          <div className="max-w-4xl mx-auto space-y-4 sm:space-y-8">
             {educationAndExperience.experience.map((exp, idx) => (
-              <div key={exp.role} className="p-8 border border-neutral-800 bg-neutral-950/60 relative">
+              <div key={exp.role} className="p-4 sm:p-7 border border-neutral-800 bg-neutral-950/60 relative">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-800/80 pb-4 mb-6">
                   <div>
                     <span className={`text-[10px] font-mono tracking-widest uppercase px-2 py-0.5 border rounded ${
@@ -81,11 +81,11 @@ export default function ExperienceEducation() {
 
         {/* Tab 2: Education */}
         {activeTab === 'academics' && (
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="max-w-4xl mx-auto space-y-3 sm:space-y-6">
             {educationAndExperience.education.map((edu, idx) => (
               <div
                 key={edu.degree}
-                className="p-8 border border-neutral-800 bg-neutral-950/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                className="p-4 sm:p-7 border border-neutral-800 bg-neutral-950/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
               >
                 <div className="space-y-1">
                   <div className="flex items-center gap-3">
@@ -108,11 +108,11 @@ export default function ExperienceEducation() {
 
         {/* Tab 3: Certifications */}
         {activeTab === 'certifications' && (
-          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
             {educationAndExperience.certifications.map((cert) => (
               <div
                 key={cert.title}
-                className="p-6 border border-neutral-800 bg-neutral-950/60 flex flex-col justify-between space-y-4 hover:border-neutral-600 transition-colors"
+                className="p-4 sm:p-6 border border-neutral-800 bg-neutral-950/60 flex flex-col justify-between space-y-3 sm:space-y-4 hover:border-neutral-600 transition-colors"
               >
                 <div>
                   <span className="text-[10px] font-mono tracking-widest uppercase text-neutral-400 border border-neutral-800 px-2 py-0.5 rounded">

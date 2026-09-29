@@ -16,11 +16,11 @@ export default function Works({ onSelectProject }) {
   return (
     <section
       id="works"
-      className="relative bg-black text-white py-20 sm:py-28 border-t border-neutral-900"
+      className="relative bg-black text-white py-10 sm:py-16 lg:py-24 border-t border-neutral-900"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-10">
         {/* Section Header: PROJECTS */}
-        <div className="text-center max-w-2xl mx-auto space-y-3 sm:space-y-4 mb-10 sm:mb-12">
+        <div className="text-center max-w-2xl mx-auto space-y-2 sm:space-y-4 mb-6 sm:mb-10">
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white uppercase">
             PROJECTS
           </h2>
@@ -30,7 +30,7 @@ export default function Works({ onSelectProject }) {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex items-center justify-center gap-2 sm:gap-6 mb-12 sm:mb-16 flex-wrap">
+        <div className="flex items-center justify-center gap-2 sm:gap-6 mb-6 sm:mb-10 flex-wrap">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -47,7 +47,7 @@ export default function Works({ onSelectProject }) {
         </div>
 
         {/* Projects Grid: 2 columns on tablet and desktop, clean stacked/compact cards on mobile */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 max-w-6xl mx-auto">
           {filteredProjects.map((project) => (
             <div
               key={project.id}

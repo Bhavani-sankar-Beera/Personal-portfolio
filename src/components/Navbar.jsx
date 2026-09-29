@@ -39,17 +39,17 @@ export default function Navbar({ onOpenResume }) {
       <header
         className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-black/95 backdrop-blur-md py-4 border-b border-neutral-900 shadow-xl'
-            : 'bg-transparent py-6'
+            ? 'bg-black/95 backdrop-blur-md py-2 sm:py-3 border-b border-neutral-900 shadow-xl'
+            : 'bg-transparent py-2 sm:py-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-10 flex items-center justify-between">
           {/* Stylized Monogram Logo */}
           <a
             href="#hero"
             className="group flex items-center gap-3 text-white transition-opacity hover:opacity-85"
           >
-            <div className="relative flex items-center justify-center w-10 h-10 border-2 border-white font-black text-2xl tracking-tighter uppercase select-none transition-transform group-hover:scale-105 bg-black">
+            <div className="relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 border-2 border-white font-black text-xl sm:text-2xl tracking-tighter uppercase select-none transition-transform group-hover:scale-105 bg-black">
               <span>B</span>
               <span className="absolute -bottom-1 -right-1 w-2 h-2 bg-white"></span>
             </div>
@@ -59,7 +59,7 @@ export default function Navbar({ onOpenResume }) {
             </div>
           </a>
 
-          {/* Desktop Navigation Links (CV button removed per user request) */}
+          {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -76,16 +76,16 @@ export default function Navbar({ onOpenResume }) {
           <button
             type="button"
             onClick={() => setSidebarOpen(true)}
-            className="group flex items-center gap-2.5 px-3 py-2 border border-neutral-800 hover:border-white bg-neutral-950/80 transition-all duration-200 focus:outline-none"
+            className="group flex items-center gap-2 px-2.5 py-1.5 sm:px-3 sm:py-2 border border-neutral-800 hover:border-white bg-neutral-950/80 transition-all duration-200 focus:outline-none"
             aria-label="Open Navigation Sidebar"
           >
-            <span className="text-[11px] font-mono tracking-widest uppercase text-neutral-400 group-hover:text-white hidden sm:inline">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase text-neutral-400 group-hover:text-white hidden sm:inline">
               MENU
             </span>
-            <div className="flex flex-col justify-center items-end gap-1 w-5">
-              <span className="w-5 h-[2px] bg-white transition-all"></span>
-              <span className="w-3.5 h-[2px] bg-white transition-all group-hover:w-5"></span>
-              <span className="w-4 h-[2px] bg-white transition-all"></span>
+            <div className="flex flex-col justify-center items-end gap-1 w-4 sm:w-5">
+              <span className="w-4 sm:w-5 h-[2px] bg-white transition-all"></span>
+              <span className="w-3 sm:w-3.5 h-[2px] bg-white transition-all group-hover:w-4 sm:group-hover:w-5"></span>
+              <span className="w-3.5 sm:w-4 h-[2px] bg-white transition-all"></span>
             </div>
           </button>
         </div>

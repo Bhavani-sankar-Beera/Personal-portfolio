@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-neutral-400 py-12 border-t border-neutral-900 text-xs">
+    <footer className="bg-black text-neutral-400 py-8 sm:py-10 border-t border-neutral-900 text-xs">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-6">
         {/* Left: Monogram and copyright */}
         <div className="flex items-center gap-4">
