@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { projects } from '../data/portfolioData';
 import { ExternalLink, ArrowUpRight, Activity, Eye, Database, Sparkles } from 'lucide-react';
-import { GithubIcon } from './Icons';
 
 export default function Works({ onSelectProject }) {
   const [filter, setFilter] = useState('ALL');
@@ -57,6 +56,38 @@ export default function Works({ onSelectProject }) {
               {/* Card Visual / Mockup Container */}
               <div className="relative h-48 sm:h-64 bg-neutral-900/60 overflow-hidden flex items-center justify-center p-4 sm:p-6 border-b border-neutral-900">
                 {/* Visual Representation based on project type */}
+                {project.visualType === 'researcher' && (
+                  <div className="w-full h-full bg-white text-black p-4 sm:p-5 rounded shadow-2xl flex flex-col justify-between transform group-hover:scale-105 transition-transform duration-500">
+                    <div className="flex items-center justify-between border-b border-neutral-200 pb-1.5 sm:pb-2">
+                      <div className="flex items-center gap-1.5 sm:gap-2">
+                        <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black" />
+                        <span className="text-[10px] sm:text-xs font-bold tracking-tight font-mono">Mini Researcher AI</span>
+                      </div>
+                      <span className="text-[8px] sm:text-[10px] font-mono px-1.5 sm:px-2 py-0.5 bg-black text-white rounded font-semibold">Gemini + RAG</span>
+                    </div>
+                    <div className="space-y-1.5 sm:space-y-2 py-1 sm:py-2">
+                      <div className="flex justify-between text-[9px] sm:text-[11px] text-neutral-600 font-mono">
+                        <span>Autonomous Sub-Query Search</span>
+                        <span className="font-bold text-black">ChromaDB Vectors</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[8px] sm:text-[9px] font-mono bg-neutral-100 p-1.5 rounded border border-neutral-200">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span className="truncate text-neutral-700">Tavily Web Ingestion & PDF Synthesis</span>
+                      </div>
+                      <div className="flex gap-1 sm:gap-1.5 pt-0.5 flex-wrap">
+                        <span className="text-[8px] sm:text-[9px] bg-neutral-100 px-1.5 py-0.5 border border-neutral-300 font-mono">Gemini</span>
+                        <span className="text-[8px] sm:text-[9px] bg-neutral-100 px-1.5 py-0.5 border border-neutral-300 font-mono">Tavily</span>
+                        <span className="text-[8px] sm:text-[9px] bg-neutral-100 px-1.5 py-0.5 border border-neutral-300 font-mono">FastAPI</span>
+                        <span className="text-[8px] sm:text-[9px] bg-neutral-100 px-1.5 py-0.5 border border-neutral-300 font-mono">React</span>
+                      </div>
+                    </div>
+                    <div className="text-[9px] sm:text-[10px] text-neutral-500 font-mono flex items-center justify-between pt-1.5 sm:pt-2 border-t border-neutral-200">
+                      <span>Live Multi-Source Research Engine</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black" />
+                    </div>
+                  </div>
+                )}
+
                 {project.visualType === 'dashboard' && (
                   <div className="w-full h-full bg-white text-black p-4 sm:p-5 rounded shadow-2xl flex flex-col justify-between transform group-hover:scale-105 transition-transform duration-500">
                     <div className="flex items-center justify-between border-b border-neutral-200 pb-1.5 sm:pb-2">
@@ -188,9 +219,17 @@ export default function Works({ onSelectProject }) {
                     Details & Architecture <ArrowUpRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
                   {project.liveUrl && (
-                    <span className="text-[9px] sm:text-[10px] font-mono text-emerald-400 bg-emerald-950/40 px-2 py-0.5 border border-emerald-900/60 rounded">
-                      Live App
-                    </span>
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-[9px] sm:text-[10px] font-mono text-emerald-400 bg-emerald-950/40 hover:bg-emerald-900/60 hover:text-emerald-300 px-2 py-0.5 border border-emerald-900/60 rounded flex items-center gap-1 transition-colors"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      <span>Live App</span>
+                      <ExternalLink className="w-2.5 h-2.5" />
+                    </a>
                   )}
                 </div>
               </div>

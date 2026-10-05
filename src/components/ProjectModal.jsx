@@ -1,5 +1,4 @@
-import React from 'react';
-import { X, ExternalLink, CheckCircle2, Layers, Cpu, Zap, Activity } from 'lucide-react';
+import { X, ExternalLink, Zap } from 'lucide-react';
 import { GithubIcon } from './Icons';
 
 export default function ProjectModal({ project, onClose }) {

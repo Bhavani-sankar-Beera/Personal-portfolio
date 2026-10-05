@@ -61,6 +61,20 @@ export const specializations = [
 
 export const projects = [
   {
+    id: "mini-researcher",
+    title: "Mini Researcher",
+    subtitle: "AI-Powered Research Assistant & RAG Pipeline",
+    category: "AI / ML",
+    tags: ["React", "FastAPI", "Gemini", "Tavily", "RAG", "ChromaDB", "Render", "Vercel"],
+    stats: "Live Platform • Multi-Agent RAG & PDF Export",
+    description:
+      "Built an AI-powered research assistant that automates web research, document analysis, information retrieval, and report generation using Gemini, Tavily, RAG, ChromaDB, FastAPI, and React. The system decomposes user queries into relevant sub-queries, retrieves and filters web sources, extracts useful content, stores knowledge as vector embeddings, and generates structured research reports with source references. It also supports document upload, RAG-based question answering, and PDF report export, with the frontend deployed on Vercel and the backend on Render.",
+    liveUrl: "https://main-project-khaki-rho.vercel.app/",
+    githubUrl: "https://github.com/Bhavani-sankar-Beera",
+    featured: true,
+    visualType: "researcher"
+  },
+  {
     id: "jobflow-engine",
     title: "JobFlow Engine",
     subtitle: "AI Career Intelligence Platform",
@@ -216,6 +230,8 @@ export const technicalSkills = {
     "OpenCV",
     "NumPy",
     "Pandas",
+    "RAG Pipelines",
+    "ChromaDB",
     "Vector Embeddings",
     "LLM Prompting",
     "OpenAI API",
@@ -224,6 +240,7 @@ export const technicalSkills = {
   webApis: ["React.js", "FastAPI", "Django", "REST APIs", "HTML5", "CSS3", "Tailwind CSS"],
   genAiAutomation: [
     "Google Gemini AI",
+    "Tavily AI Search",
     "n8n Workflow Automation",
     "Prompt Engineering",
     "GPT Embeddings",
@@ -233,10 +250,12 @@ export const technicalSkills = {
     "MySQL",
     "SQLite",
     "Supabase",
+    "ChromaDB",
     "Django ORM",
     "Git",
     "GitHub",
     "Vercel",
+    "Render",
     "Railway",
     "VS Code"
   ],
